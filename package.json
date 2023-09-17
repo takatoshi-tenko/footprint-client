@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "firebase": "^10.4.0",
+    "nuxi": "^3.8.4",
     "postcss-custom-properties": "^13.3.0"
   }
 }

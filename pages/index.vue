@@ -2,6 +2,7 @@
   <div>
     <h2>今日の日付</h2>
     <h2>今日の日付</h2>
+    <h2>今日の日付</h2>
     <p class="today">today</p>
     <p>目標の日付：<input type="date" name="date" /></p>
     <p>入力した日付まで後<span class="leftDay"></span>日</p>
@@ -16,16 +17,30 @@
     <h2>{{ $hello("World") }}</h2>
     <h2>{{ data }}</h2>
     <div>
-      メールアドレス<input id="mailAddress" type="mailAddress" required />
+      <h1>Firebase Authentication Example</h1>
+      <p class="lead">
+        This example is a quick exercise to sign in with a google acount.
+      </p>
+      <div v-if="currentUser == null">
+        <button type="button" role="button" @click="signIn">Sign In</button>
+      </div>
+      <div v-else>
+        <button type="button" role="button" @click="signOutUser">
+          Sign Out
+        </button>
+      </div>
     </div>
-    <div>パスワード<input id="password" type="password" required /></div>
-    <button id="login">ログイン</button>
-    <button id="register" @click="submit">新規登録</button>
   </div>
 </template>
 
 <script setup>
-import firebase from '~/plugins/firebase'
+import {
+  getAuth,
+  onAuthStateChanged,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 const route = useRoute();
 const { count, inc, dec } = useCounter(100);
 const { $hello } = useNuxtApp();
