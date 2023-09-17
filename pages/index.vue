@@ -51,6 +51,36 @@ const enableCustomLayout = () => {
 };
 const show = ref(false);
 
+// data: () => ({
+//         currentUser: null
+//     }),
+//     mounted(){
+//         onAuthStateChanged(getAuth(), (user) => {
+//             if ( user != null ){
+//                 this.currentUser = user;
+//             }else{
+//                 this.currentUser = null;
+//             }
+//         });
+//     },
+//     methods: {
+//         signIn() {
+//             var provider = new GoogleAuthProvider();
+//             signInWithPopup(getAuth(), provider)
+//             .then((auth) => {
+//                 console.log("login", auth.user );
+//             })
+//             .catch((error) => {
+//                 const errorCode = error.code;
+//                 const errorMessage = error.message;
+//                 console.log("faild to login", errorCode, errorMessage );
+//             });
+//         },
+//         signOutUser() {
+//             signOut(getAuth());
+//         }
+//     }
+
 //新規登録処理
 const submit = () => {
   register.addEventListener("click", function (e) {
