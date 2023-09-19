@@ -8,14 +8,15 @@ import { defineNuxtPlugin } from "#app";
 
 export default defineNuxtPlugin(() => {
   const firebaseConfig = {
-    apiKey: "AIzaSyBnoan4C_eRWUVwu9-ZyW9vaa_BafK0Ad0",
-    authDomain: "feootprint.firebaseapp.com",
-    projectId: "feootprint",
-    storageBucket: "feootprint.appspot.com",
-    messagingSenderId: "124048423816",
-    appId: "1:124048423816:web:1ab8e7c35312341fa0d83d",
-    measurementId: "G-P9171LBLSK"
+    apiKey: "AIzaSyB-cpZT8Cy5rBZ2cZrzXI69je4c6zNOC6s",
+    authDomain: "foot-life-print.firebaseapp.com",
+    projectId: "foot-life-print",
+    storageBucket: "foot-life-print.appspot.com",
+    messagingSenderId: "600582337292",
+    appId: "1:600582337292:web:f49e519b4fa1aceeaa8f29",
+    measurementId: "G-JTGVBW8X7P"
   };
+  
   initializeApp(firebaseConfig);
 
   const isEmulating = window.location.hostname === "localhost";
