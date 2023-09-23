@@ -19,6 +19,7 @@
     <h2>{{ data }}</h2>
     <div>
       <h1>Firebase Authentication Example</h1>
+      <h1>Firebase Authentication Example</h1>
       <p class="lead">
         This example is a quick exercise to sign in with a google acount.
       </p>
